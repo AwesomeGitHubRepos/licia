@@ -266,6 +266,25 @@
             "browser"
         ]
     },
+    "Channel": {
+        "dependencies": [
+            "Emitter",
+            "each",
+            "remove",
+            "some"
+        ],
+        "description": "Interconnectable Message channel.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.42.0",
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
     "Class": {
         "demo": true,
         "dependencies": [
@@ -1393,6 +1412,24 @@
             "browser"
         ]
     },
+    "cgroup": {
+        "dependencies": [
+            "memoize",
+            "each",
+            "trim",
+            "toNum",
+            "contain",
+            "concat",
+            "range",
+            "startWith"
+        ],
+        "description": "Read cgroup metrics inside container.",
+        "env": [
+            "node"
+        ],
+        "since": "1.35.0",
+        "test": []
+    },
     "char": {
         "dependencies": [],
         "description": "Return string representing a character whose Unicode code point is the given integer.",
@@ -1621,6 +1658,24 @@
             "node",
             "browser"
         ]
+    },
+    "container": {
+        "dependencies": [
+            "cgroup",
+            "perfNow",
+            "sleep",
+            "memoize",
+            "each",
+            "isEmpty",
+            "sum",
+            "isNaN"
+        ],
+        "description": "Get container stats inside container.",
+        "env": [
+            "node"
+        ],
+        "since": "1.35.0",
+        "test": []
     },
     "convertBase": {
         "dependencies": [],
@@ -1871,6 +1926,44 @@
             "browser"
         ]
     },
+    "dataUrl": {
+        "dependencies": [
+            "isDataUrl",
+            "trim",
+            "endWith",
+            "startWith",
+            "contain",
+            "decodeUriComponent",
+            "defaults",
+            "isStr",
+            "convertBin"
+        ],
+        "description": "Parse and stringify data urls.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.41.0",
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
+    "dataView": {
+        "dependencies": [],
+        "description": "Like DataView, but without creating a new object.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.47.0",
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
     "dateFormat": {
         "dependencies": [
             "isStr",
@@ -2111,7 +2204,8 @@
     },
     "detectOs": {
         "dependencies": [
-            "isBrowser"
+            "isBrowser",
+            "isNode"
         ],
         "description": "Detect operating system using ua.",
         "env": [
@@ -2166,6 +2260,21 @@
         "env": [
             "browser"
         ],
+        "test": [
+            "browser"
+        ]
+    },
+    "dpr": {
+        "demo": true,
+        "dependencies": [
+            "Emitter",
+            "MediaQuery"
+        ],
+        "description": "Device pixel ratio helper.",
+        "env": [
+            "browser"
+        ],
+        "since": "1.46.0",
         "test": [
             "browser"
         ]
@@ -2450,7 +2559,10 @@
         ]
     },
     "fileSize": {
-        "dependencies": [],
+        "dependencies": [
+            "isStr",
+            "toNum"
+        ],
         "description": "Turn bytes into human readable file size.",
         "env": [
             "node",
@@ -2475,6 +2587,22 @@
             "miniprogram"
         ],
         "since": "1.5.1",
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
+    "fileUrl": {
+        "dependencies": [
+            "normalizePath"
+        ],
+        "description": "Convert a file path to a file URL.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.36.0",
         "test": [
             "node",
             "browser"
@@ -2945,7 +3073,8 @@
             "each",
             "unique",
             "trim",
-            "map"
+            "map",
+            "isFn"
         ],
         "description": "Capture keyboard input to trigger given events.",
         "env": [
@@ -3377,6 +3506,20 @@
             "node"
         ]
     },
+    "isDocker": {
+        "dependencies": [
+            "memoize",
+            "contain"
+        ],
+        "description": "Check if the process is running inside a docker container.",
+        "env": [
+            "node"
+        ],
+        "since": "1.35.0",
+        "test": [
+            "node"
+        ]
+    },
     "isEl": {
         "dependencies": [],
         "description": "Check if value is a DOM element.",
@@ -3602,6 +3745,22 @@
             "browser",
             "miniprogram"
         ],
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
+    "isMac": {
+        "dependencies": [
+            "detectOs"
+        ],
+        "description": "Check if platform is mac.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.40.0",
         "test": [
             "node",
             "browser"
@@ -3940,6 +4099,17 @@
             "browser"
         ]
     },
+    "isShadowRoot": {
+        "dependencies": [],
+        "description": "Check if value is a ShadowRoot object.",
+        "env": [
+            "browser"
+        ],
+        "since": "1.43.0",
+        "test": [
+            "browser"
+        ]
+    },
     "isSorted": {
         "dependencies": [],
         "description": "Check if an array is sorted.",
@@ -3963,6 +4133,21 @@
             "browser",
             "miniprogram"
         ],
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
+    "isStrBlank": {
+        "benchmark": true,
+        "dependencies": [],
+        "description": "Check if string is blank.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.39.0",
         "test": [
             "node",
             "browser"
@@ -4068,13 +4253,18 @@
         ]
     },
     "isWindows": {
-        "dependencies": [],
+        "dependencies": [
+            "detectOs"
+        ],
         "description": "Check if platform is windows.",
         "env": [
-            "node"
+            "node",
+            "browser",
+            "miniprogram"
         ],
         "test": [
-            "node"
+            "node",
+            "browser"
         ]
     },
     "jsonClone": {
@@ -4184,6 +4374,7 @@
             "stackTrace",
             "splitPath",
             "startWith",
+            "endWith",
             "defineProp",
             "isStr",
             "has",
@@ -4400,12 +4591,15 @@
         ]
     },
     "md5": {
+        "benchmark": true,
         "dependencies": [
             "isStr",
             "strToBytes",
             "hex",
             "bytesToWords",
-            "wordsToBytes"
+            "wordsToBytes",
+            "isNode",
+            "isArr"
         ],
         "description": "MD5 implementation.",
         "env": [
@@ -5043,6 +5237,19 @@
         ],
         "test": [
             "node",
+            "browser"
+        ]
+    },
+    "pointerEvent": {
+        "dependencies": [
+            "root"
+        ],
+        "description": "Get the pointer event name, use touch and mouse events as a fallback if not supported.",
+        "env": [
+            "browser"
+        ],
+        "since": "1.42.0",
+        "test": [
             "browser"
         ]
     },
@@ -5699,6 +5906,29 @@
             "browser"
         ]
     },
+    "sha1": {
+        "benchmark": true,
+        "dependencies": [
+            "isStr",
+            "strToBytes",
+            "hex",
+            "bytesToWords",
+            "wordsToBytes",
+            "isNode",
+            "isArr"
+        ],
+        "description": "SHA1 implementation.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.49.0",
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
     "shebang": {
         "dependencies": [
             "trim"
@@ -5742,6 +5972,22 @@
             "browser",
             "miniprogram"
         ],
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
+    "singleton": {
+        "dependencies": [
+            "has"
+        ],
+        "description": "Ensure an async function is only called once before it resolves.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.44.0",
         "test": [
             "node",
             "browser"
@@ -6102,6 +6348,20 @@
             "browser"
         ]
     },
+    "stripBom": {
+        "dependencies": [],
+        "description": "Strip UTF-8 byte order mark.",
+        "env": [
+            "node",
+            "browser",
+            "miniprogram"
+        ],
+        "since": "1.38.0",
+        "test": [
+            "node",
+            "browser"
+        ]
+    },
     "stripCmt": {
         "dependencies": [],
         "description": "Strip comments from source code.",
@@ -6207,7 +6467,11 @@
             "strWidth",
             "map",
             "repeat",
-            "cloneDeep"
+            "cloneDeep",
+            "defaults",
+            "trim",
+            "rtrim",
+            "filter"
         ],
         "description": "Output table string.",
         "env": [
@@ -6237,6 +6501,20 @@
             "browser"
         ]
     },
+    "theme": {
+        "dependencies": [
+            "Emitter",
+            "MediaQuery"
+        ],
+        "description": "Theme helper.",
+        "env": [
+            "browser"
+        ],
+        "since": "1.44.0",
+        "test": [
+            "browser"
+        ]
+    },
     "throttle": {
         "dependencies": [
             "debounce"
@@ -6262,6 +6540,19 @@
         "env": [
             "node"
         ],
+        "test": [
+            "node"
+        ]
+    },
+    "tildify": {
+        "dependencies": [
+            "startWith"
+        ],
+        "description": "Convert absolute path to tilde path.",
+        "env": [
+            "node"
+        ],
+        "since": "1.40.0",
         "test": [
             "node"
         ]
@@ -6925,8 +7216,11 @@
         "test": []
     },
     "xpath": {
-        "dependencies": [],
-        "description": "Select elements using xpath, IE is not supported.",
+        "dependencies": [
+            "isStr",
+            "Class"
+        ],
+        "description": "Select elements using xpath or get element xpath, IE is not supported.",
         "env": [
             "browser"
         ],

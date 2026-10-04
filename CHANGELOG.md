@@ -1,3 +1,112 @@
+## v1.49.0 (13 Aug 2026)
+
+* feat: add sha1
+* fix(kill): avoid shell execution
+* fix: ts types
+
+## v1.48.1 (11 May 2026)
+
+* fix: ts types
+
+## v1.48.0 (27 Mar 2025)
+
+* feat(xpath): get element xpath
+
+## v1.47.0 (11 Mar 2025)
+
+* feat: add dataView
+* fix(extend): ts definition
+
+## v1.46.0 (27 Nov 2024)
+
+* feat: add dpr
+* feat(fileSize): turn back to bytes
+
+## v1.45.0 (18 Nov 2024)
+
+* feat(table): parse table string
+
+## v1.44.0 (2 Nov 2024)
+
+* feat: add singleton
+* feat: add theme
+
+## v1.43.0 (9 Oct 2024)
+
+* feat: add isShadowRoot
+* fix(isErr): DOMException return false
+
+## v1.42.0 (20 Sep 2024)
+
+* feat: add Channel
+* feat: add pointerEvent
+
+## v1.41.1 (23 Jul 2024)
+
+* fix: randomId size over 21 error [#33](https://github.com/liriliri/licia/issues/33)
+
+## v1.41.0 (18 Jun 2024)
+
+* feat: add dataUrl
+
+## v1.40.0 (31 May 2024)
+
+* feat: add tildify
+* feat: add isMac
+
+## v1.39.2 (22 Dec 2023)
+
+* feat(hotkey): support element option
+
+## v1.39.1 (21 Nov 2023)
+
+* fix: lazyImport 
+
+## v1.39.0 (21 Nov 2023)
+
+* feat: add isStrBlank
+
+## v1.38.2 (4 Jul 2023)
+
+* fix(remove): loop through undefined values
+
+## v1.38.1 (19 Apr 2023)
+
+* fix(isHidden): position fixed always return true
+
+## v1.38.0 (25 Feb 2023)
+
+* feat: add stripBom
+* feat(MediaQuery): support setQuery
+* fix: is function ts types
+
+## v1.37.1 (28 Jan 2023)
+
+* fix(uncaught): worker error null
+
+## v1.37.0 (20 Jul 2022)
+
+* feat(container): memUsage, memLoad
+* feat(cgroup): memory
+* perf(md5): use crypto if possible
+
+## v1.36.0 (18 May 2022)
+
+* feat: add fileUrl
+* fix(trigger): typescript definition
+* fix(ajax): Add query parameters if they are necessary [#27](https://github.com/liriliri/licia/issues/27)
+
+## v1.35.1 (18 Apr 2022)
+
+* fix(container): cpuLoad return NaN
+
+## v1.35.0 (15 Apr 2022)
+
+* feat: add isDocker
+* feat: add cgroup
+* feat: add container
+* fix(raf): illegal invocation
+
 ## v1.34.0 (13 Jan 2022)
 
 * feat: add hookFn

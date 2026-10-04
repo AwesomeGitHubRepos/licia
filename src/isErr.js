@@ -15,11 +15,17 @@
  */
 
 /* typescript
- * export declare function isErr(val: any): boolean;
+ * export declare function isErr(val: any): val is Error;
  */
 
 _('objToStr');
 
 exports = function(val) {
-    return objToStr(val) === '[object Error]';
+    switch (objToStr(val)) {
+        case '[object Error]':
+        case '[object DOMException]':
+            return true;
+        default:
+            return val instanceof Error;
+    }
 };

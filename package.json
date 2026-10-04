@@ -1,6 +1,6 @@
 {
   "name": "licia",
-  "version": "1.34.0",
+  "version": "1.49.0",
   "description": "Useful utility collection with zero dependencies",
   "bin": {
     "licia": "./bin/licia.js"
@@ -18,8 +18,8 @@
     "demo": "licia demo",
     "karma": "karma",
     "mocha": "mocha",
-    "format": "prettier '*.js' 'lib/**/*.js' 'lib/*.js' 'bin/*.js' --write && licia format",
-    "format:pkg": "prettier '.licia/packages/**/*.{js,d.ts}' '.licia/packages/**/**/*.js' --write",
+    "format": "prettier \"*.js\" \"lib/**/*.js\" \"lib/*.js\" \"bin/*.js\" --write && licia format",
+    "format:pkg": "prettier \".licia/packages/**/*.{js,d.ts}\" \".licia/packages/**/**/*.js\" --write",
     "test:node": "licia test -s",
     "test:browser": "licia test -bs",
     "test:release": "copyfiles -u 2 .licia/packages/licia/* .licia/node_modules && licia test -r",
@@ -31,7 +31,8 @@
     "url": "git+https://github.com/liriliri/licia.git"
   },
   "keywords": [
-    "eustia"
+    "eustia",
+    "util"
   ],
   "author": "redhoodsu",
   "license": "MIT",
@@ -47,17 +48,18 @@
     "@babel/plugin-transform-parameters": "^7.4.4",
     "@babel/plugin-transform-shorthand-properties": "^7.2.0",
     "@babel/plugin-transform-template-literals": "^7.4.4",
-    "@types/node": "^12.7.2",
+    "@types/node": "^20.19.40",
     "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.2.0",
     "copyfiles": "^2.1.1",
     "cspell": "^4.0.55",
-    "eslint": "^6.2.2",
+    "es-check": "^6.2.1",
+    "eslint": "^8.57.1",
     "eustia": "^0.9.0",
     "eustia-component": "^0.0.3",
-    "execa": "^2.0.4",
+    "execa": "^5.1.1",
     "glob": "^7.1.4",
-    "karma": "^4.3.0",
+    "karma": "^6.3.19",
     "karma-babel-preprocessor": "^8.0.1",
     "karma-chai-plugins": "^0.9.0",
     "karma-chrome-launcher": "^3.1.0",
@@ -69,7 +71,6 @@
     "ncp": "^2.0.0",
     "nyc": "^14.1.1",
     "prettier": "^1.19.1",
-    "typescript": "^3.6.2",
-    "uglify-js": "^3.9.4"
+    "typescript": "^5.3.2"
   }
 }
